@@ -133,9 +133,15 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(getApplicationContext(),HelpActivity.class));
     }
 
+    public void openCheckout(View view) {
+        startActivity(new Intent(getApplicationContext(), CheckoutActivity.class));
+    }
+
+
     public void openGallery(View View){
         startActivity(new Intent(getApplicationContext(),GalleryActivity.class));
     }
+
 
 
 

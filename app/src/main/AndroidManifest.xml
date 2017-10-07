@@ -122,11 +122,12 @@
         <activity
             android:name=".ui.activities.MocaptureActivity"
             android:label="@string/mo_capture" />
-        <activity android:name=".ui.activities.HotelListingAndSearchActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".ui.activities.EventsAndCinemasActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-
+        <activity
+            android:name=".ui.activities.HotelListingAndSearchActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ui.activities.EventsAndCinemasActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -136,6 +137,11 @@
         <activity
             android:name=".ui.activities.FlightReservationReceiptActivity"
             android:label="@string/title_activity_flight_reservation_receipt" />
+
+        <activity android:name=".ui.activities.CheckoutActivity"
+            android:label="@string/checkout"/>
+
+
         <activity
             android:name=".ui.activities.AnalyticsActivity"
             android:label="@string/title_analytics_page">
@@ -151,6 +157,7 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+
         </activity>
 
     </application>
