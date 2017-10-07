@@ -13,7 +13,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical"
             android:background="#F4F4F4">
 
@@ -31,7 +31,7 @@
                     android:layout_marginBottom="8dp"
                     android:fontFamily="Lato"
                     android:gravity="center_horizontal"
-                    android:text="@string/hotels_ng"
+                    android:text="@string/lc_title"
                     android:textColor="#FFFFFF"
                     android:textSize="25sp"
                     android:textStyle="bold" />
@@ -42,9 +42,10 @@
                     android:layout_height="139dp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginBottom="20dp"
-                    android:src="@drawable/aeroplane"
+                    android:src="@drawable/ic_profile"
                     app:civ_border_color="#FFFFFF"
-                    app:civ_border_width="2dp" />
+                    app:civ_border_width="2dp"
+                    tools:src="@drawable/profile" />
 
                 <TextView
                     android:id="@+id/profile_name"
@@ -97,19 +98,20 @@
                         android:layout_width="190dp"
                         android:layout_height="163dp"
                         android:layout_marginLeft="8dp"
-                        android:background="@drawable/aeroplane" />
+                        android:background="@drawable/wallet" />
 
                     <TextView
                         android:id="@+id/loyalty_balance"
                         android:layout_width="159dp"
                         android:layout_height="46dp"
-                        android:layout_marginTop="40dp"
                         android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:fontFamily="lato"
                         android:gravity="center_vertical|center_horizontal"
                         android:text="@string/loyalty_balance"
-                        android:textStyle="bold"
-                        android:fontFamily="lato"
-                        android:textSize="20sp"/>
+                        android:textColor="#4F4F4F"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <android.support.v7.widget.CardView
@@ -117,55 +119,88 @@
                     android:layout_height="116dp"
                     android:layout_marginLeft="23dp"
                     android:background="#F2F2F2"
-                    app:cardCornerRadius="5dp"
-                    android:elevation="5dp">
+                    android:elevation="5dp"
+                    app:cardCornerRadius="5dp">
 
                     <LinearLayout
                         android:layout_width="338dp"
-                        android:layout_height="60dp"
-                        android:orientation="horizontal">
+                        android:layout_height="116dp"
+                        android:background="#f2f2f2"
+                        android:orientation="vertical">
 
-                        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
-                            android:id="@+id/lc_logo"
-                            android:layout_width="31dp"
-                            android:layout_height="31dp"
-                            android:layout_gravity="center_vertical"
-                            android:layout_marginLeft="8dp"
-                            android:src="@drawable/aeroplane" />
+                        <LinearLayout
+                            android:layout_width="338dp"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:layout_width="89dp"
-                            android:layout_height="29dp"
-                            android:layout_marginLeft="20dp"
-                            android:layout_gravity="center_vertical"
-                            android:text="@string/gain"
-                            android:fontFamily="Lato"
-                            android:textColor="#000000"
-                            android:textStyle="bold"
-                            android:textSize="18sp"
-                            />
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:id="@+id/lc_logo"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_lc" />
 
-                        <ImageView
-                            android:id="@+id/vector_4"
-                            android:layout_width="8dp"
-                            android:layout_height="14dp"
-                            android:layout_gravity="center_vertical"
-                            app:srcCompat="@drawable/ic_arrow_back"
-                            android:layout_marginLeft="300dp"/>
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/gain"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
 
-                    </LinearLayout>
+                            <ImageView
+                                android:id="@+id/vector_4"
+                                android:layout_width="8dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="150dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
 
-                    <view
-                        android:layout_width="338dp"
-                        android:layout_height="2dp"
-                        android:layout_marginLeft="23dp"
-                        android:background="#66C4C4C4" />
+                        </LinearLayout>
 
-                    <LinearLayout
-                        android:layout_width="338dp"
-                        android:layout_height="60dp"
-                        android:orientation="horizontal">
+                        <view
+                            android:layout_width="338dp"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="23dp"
+                            android:background="#66C4C4C4" />
 
+                        <LinearLayout
+                            android:layout_width="338dp"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_lc" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/used"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <ImageView
+                                android:layout_width="8dp"
+                                android:layout_height="32dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="150dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/ic_keyboard_arrow_right_black_24dp" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -173,28 +208,31 @@
 
                 <android.support.v7.widget.CardView
                     android:layout_width="338dp"
-                    android:layout_height="116dp"
+                    android:layout_height="400dp"
                     android:layout_marginLeft="23dp"
                     android:layout_marginTop="25dp"
                     android:background="#F2F2F2"
                     app:cardCornerRadius="5dp"
                     app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="338dp"
-                        android:layout_height="116dp"
+                        android:layout_height="400dp"
+                        android:background="#f2f2f2"
                         android:orientation="vertical">
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="@string/history"
-                            android:layout_marginLeft="43dp"
-                            android:layout_marginTop="22dp"
+                            android:layout_width="89dp"
+                            android:layout_height="29dp"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="33dp"
+                            android:layout_marginTop="10dp"
                             android:fontFamily="Lato"
+                            android:text="@string/history"
                             android:textColor="#000000"
-                            android:textStyle="bold"
                             android:textSize="18sp"
-                            />
+                            android:textStyle="bold" />
+
                         <view
                             android:layout_width="338dp"
                             android:layout_height="2dp"
@@ -205,6 +243,35 @@
                             android:layout_width="338dp"
                             android:layout_height="60dp"
                             android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_used" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/_1000lc"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="125dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/pending"
+                                android:textColor="#BDBDBD"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
 
                         </LinearLayout>
 
@@ -219,6 +286,34 @@
                             android:layout_height="60dp"
                             android:orientation="horizontal">
 
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_used" />
+
+                            <TextView
+                                android:layout_width="123dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/coins_used"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="75dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/_5hours_ago"
+                                android:textColor="#BDBDBD"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <view
@@ -232,6 +327,34 @@
                             android:layout_height="60dp"
                             android:orientation="horizontal">
 
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_gained" />
+
+                            <TextView
+                                android:layout_width="123dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/coins_gained"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="75dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/_5hours_ago"
+                                android:textColor="#BDBDBD"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <view
@@ -245,6 +368,35 @@
                             android:layout_height="60dp"
                             android:orientation="horizontal">
 
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_gained" />
+
+                            <TextView
+                                android:layout_width="123dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/coins_gained"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="75dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/_5hours_ago"
+                                android:textColor="#BDBDBD"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
                         </LinearLayout>
 
                         <view
@@ -252,6 +404,85 @@
                             android:layout_height="2dp"
                             android:layout_marginLeft="23dp"
                             android:background="#66C4C4C4" />
+
+                        <LinearLayout
+                            android:layout_width="338dp"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_gained" />
+
+                            <TextView
+                                android:layout_width="123dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/coins_gained"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="75dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/_5hours_ago"
+                                android:textColor="#BDBDBD"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <view
+                            android:layout_width="338dp"
+                            android:layout_height="2dp"
+                            android:layout_marginLeft="23dp"
+                            android:background="#66C4C4C4" />
+
+                        <LinearLayout
+                            android:layout_width="338dp"
+                            android:layout_height="60dp"
+                            android:orientation="horizontal">
+
+
+                            <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+                                android:layout_width="31dp"
+                                android:layout_height="31dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="8dp"
+                                android:src="@drawable/ic_gained" />
+
+                            <TextView
+                                android:layout_width="123dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="20dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/coins_gained"
+                                android:textColor="#000000"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="89dp"
+                                android:layout_height="29dp"
+                                android:layout_gravity="center_vertical"
+                                android:layout_marginLeft="75dp"
+                                android:fontFamily="Lato"
+                                android:text="@string/_5hours_ago"
+                                android:textColor="#BDBDBD"
+                                android:textSize="13sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
                     </LinearLayout>
 
 
@@ -265,11 +496,6 @@
 
     </ScrollView>
 
-    <LinearLayout
-        android:layout_width="338dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
 
-    </LinearLayout>
 
 </FrameLayout>

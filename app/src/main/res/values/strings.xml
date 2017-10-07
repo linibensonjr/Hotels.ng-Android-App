@@ -171,12 +171,19 @@
     <string name="history">History</string>
     <string name="loyalty_balance">My Balance\n  100250.00lc</string>
     <string name="gain">Gain</string>
-    <string name="profile_name">SALAKO ADETUNJI</string>
+    <string name="profile_name">Salako Adetunji</string>
     <string name="title_name_loyalty">Loyalty Coins</string>
     <string name="booking">Uyo - Lagos</string>
 
 	<string name="mo_capture">MoCapture</string>
     <string name="action_settings_two">Action Settings</string>
+    <string name="used">Used</string>
+    <string name="_1000lc">1000lc</string>
+    <string name="coins_used">Coins Used</string>
+    <string name="coins_gained">Coins Gained</string>
+    <string name="pending">pending</string>
+    <string name="_5hours_ago">5hours ago</string>
+    <string name="lc_title">Hotels.ng</string>
     <string-array name="image_ids">
         <item>@drawable/img1</item>
         <item>@drawable/img2</item>
