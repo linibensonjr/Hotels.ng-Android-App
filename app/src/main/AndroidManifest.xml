@@ -122,7 +122,6 @@
         <activity
             android:name=".ui.activities.MocaptureActivity"
             android:label="@string/mo_capture" />
-
         <activity
             android:name=".ui.activities.MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -132,6 +131,10 @@
         <activity
             android:name=".ui.activities.FlightReservationReceiptActivity"
             android:label="@string/title_activity_flight_reservation_receipt" />
+        <activity
+            android:name=".ui.activities.AnalyticsActivity"
+            android:label="@string/title_analytics_page"/>
+
     </application>
 
 </manifest>

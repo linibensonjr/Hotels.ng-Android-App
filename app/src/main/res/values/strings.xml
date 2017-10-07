@@ -166,6 +166,7 @@
     <string name="title_activity_review_recent_stay">ReviewRecentStayActivity</string>
     <string name="title_activity_flight_reservation_receipt">FlightReservationReceiptActivity
     </string>
+    <string name="title_analytics_page">Booking Analytics</string>
     <string name="special_promo">Special Promo</string>
     <string name="history">History</string>
     <string name="loyalty_balance">My Balance\n  100250.00lc</string>
@@ -183,6 +184,7 @@
     <string name="pending">pending</string>
     <string name="_5hours_ago">5hours ago</string>
     <string name="lc_title">Hotels.ng</string>
+    <string name="analytics_text">Your Booking Activities over 30days</string>
     <string-array name="image_ids">
         <item>@drawable/img1</item>
         <item>@drawable/img2</item>

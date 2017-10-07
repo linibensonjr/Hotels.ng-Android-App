@@ -124,4 +124,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openAnalytics(View view) {
+        startActivity(new Intent(getApplicationContext(), AnalyticsActivity.class));
+    }
+
 }
