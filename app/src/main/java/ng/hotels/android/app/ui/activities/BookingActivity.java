@@ -1,5 +1,6 @@
 package ng.hotels.android.app.ui.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -39,14 +40,28 @@ public class BookingActivity extends AppCompatActivity implements
     private ConfirmBookingFragment confirmBookingFragment;
     private PaymentOptionsFragment paymentOptionsFragment;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking);
         ButterKnife.bind(this);
 
-        showYourInfoFragment();
+        Intent intent = getIntent();
+
+        if (intent.hasExtra("page")){
+            int page = intent.getIntExtra("page", 0);
+            if (page == 0){
+                showYourInfoFragment();
+            } else if (page == 1){
+                showPaymentOptionsFragment();
+            } else if (page == 3){
+                showConfirmBookingFragment();
+            }
+        }
     }
+
+
 
 
     private void showYourInfoFragment() {
@@ -94,18 +109,6 @@ public class BookingActivity extends AppCompatActivity implements
                 .commit();
     }
 
-    @Override
-    public void onBackPressed() {
-        if (confirmBookingFragment.isAdded()) {
-            yourInfoFragment = null;
-            showYourInfoFragment();
-        } else if (paymentOptionsFragment.isAdded()){
-            paymentOptionsFragment = null;
-            showYourInfoFragment();
-        } else {
-            showYourInfoFragment();
-        }
-    }
 
     @Override
     public void onProceedClicked(String title, String country, String email, String phone, String name) {
@@ -121,4 +124,5 @@ public class BookingActivity extends AppCompatActivity implements
     public void onOptionSelected(String option) {
         showConfirmBookingFragment();
     }
+
 }

@@ -1,10 +1,60 @@
 package ng.hotels.android.app.ui.fragments;
 
-/**
- * Created by Ifunanya on 10/5/17.
- */
+import android.content.Context;
+import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class PendingPaymentReminderFragment {
+import ng.hotels.android.app.R;
 
-    //Add code for Page here
+
+public class PendingPaymentReminderFragment extends DialogFragment {
+
+
+    private OnFragmentInteractionListener mListener;
+
+    public PendingPaymentReminderFragment() {
+        // Required empty public constructor
+    }
+
+    public interface OnFragmentInteractionListener {
+        void onConfirmClicked();
+    }
+
+
+    public static PendingPaymentReminderFragment newInstance() {
+        PendingPaymentReminderFragment fragment = new PendingPaymentReminderFragment();
+        Bundle args = new Bundle();
+        fragment.setArguments(args);
+        return fragment;
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_pending_payment_reminder, container, true);
+    }
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
+        } else {
+            throw new RuntimeException(context.toString()
+                    + " must implement OnFragmentInteractionListener");
+        }
+    }
+
 }
