@@ -64,10 +64,6 @@ public class BookingActivity extends AppCompatActivity implements
     @Override
     public void onBackPressed() {
         if (confirmBookingFragment != null && confirmBookingFragment.isAdded()){
-            paymentOptionsFragment = null;
-            showPaymentOptionsFragment();
-        } else if (paymentOptionsFragment != null && paymentOptionsFragment.isAdded()){
-            yourInfoFragment = null;
             showYourInfoFragment();
         } else if (yourInfoFragment != null && yourInfoFragment.isAdded()){
             showMainPage();
