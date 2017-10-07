@@ -186,6 +186,8 @@
     <string name="pending">pending</string>
     <string name="_5hours_ago">5hours ago</string>
     <string name="lc_title">Hotels.ng</string>
+    <string name="action_cancel_all">Cancel All Reminder</string>
+    <string name="action_reminder_settings">Reminder Settings</string>
     <string name="analytics_text">Your Booking Activities over 30days</string>
     <string-array name="image_ids">
         <item>@drawable/img1</item>

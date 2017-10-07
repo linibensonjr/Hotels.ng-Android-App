@@ -137,6 +137,8 @@
         <activity
             android:name=".ui.activities.FlightReservationReceiptActivity"
             android:label="@string/title_activity_flight_reservation_receipt" />
+        <activity android:name=".ui.activities.FlightReminderActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity android:name=".ui.activities.CheckoutActivity"
             android:label="@string/checkout"/>
