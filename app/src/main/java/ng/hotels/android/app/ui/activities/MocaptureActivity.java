@@ -10,6 +10,8 @@ import android.widget.GridView;
 import java.util.ArrayList;
 
 import ng.hotels.android.app.R;
+import ng.hotels.android.app.adapters.GridViewAdapter;
+import ng.hotels.android.app.model.ImageItem;
 
 public class MocaptureActivity extends AppCompatActivity {
     private GridView gridView;

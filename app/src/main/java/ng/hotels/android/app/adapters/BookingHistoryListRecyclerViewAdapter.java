@@ -42,7 +42,7 @@ public class BookingHistoryListRecyclerViewAdapter extends RecyclerView.Adapter<
         holder.bookingCost.setText(holder.mItem.getPrice());
         holder.dateView.setText(String.valueOf(holder.mItem.getDate()));
         int date = holder.mItem.getDate();
-        if (date == 1 || date == 21 || date == 31){
+        if (date == 1 || date == 21 || date == 31) {
             holder.dateIdentifier.setText("st");
         } else if (date == 2 || date == 22) {
             holder.dateIdentifier.setText("nd");
@@ -53,7 +53,7 @@ public class BookingHistoryListRecyclerViewAdapter extends RecyclerView.Adapter<
         }
 
         int type = holder.mItem.getBookingType();
-        if (type == 0){
+        if (type == 0) {
             holder.bookingType.setImageResource(R.drawable.plane_logo);
             holder.place.setText("Airline");
             holder.departure.setText("Departure");
@@ -82,6 +82,7 @@ public class BookingHistoryListRecyclerViewAdapter extends RecyclerView.Adapter<
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+
         final ImageView bookingType;
         final TextView dateView;
         final TextView dateIdentifier;
@@ -95,14 +96,19 @@ public class BookingHistoryListRecyclerViewAdapter extends RecyclerView.Adapter<
         final TextView departure;
         final TextView arrival;
         View mView;
+        TextView mIdView;
+        TextView mContentView;
         BookingHistory mItem;
 
         public ViewHolder(View view) {
             super(view);
             mView = view;
+            mIdView = (TextView) view.findViewById(R.id.date_view);
+            mContentView = (TextView) view.findViewById(R.id.date_identifier);
+
             bookingType = view.findViewById(R.id.booking_type);
             dateView = view.findViewById(R.id.date_view);
-            dateIdentifier =  view.findViewById(R.id.date_identifier);
+            dateIdentifier = view.findViewById(R.id.date_identifier);
             dayMonth = view.findViewById(R.id.day_month);
             booking = view.findViewById(R.id.booking);
             bookingCost = view.findViewById(R.id.booking_cost);
