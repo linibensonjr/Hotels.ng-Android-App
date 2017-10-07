@@ -48,14 +48,14 @@ public class UserAuthenticationActivity extends AppCompatActivity implements
 
 
     private void showHomePage() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
         finish();
     }
 
     @Override
     public void onBackPressed() {
-        if (signUpFragment.isAdded()) {
+        if (signUpFragment != null && signUpFragment.isAdded()) {
             loginFragment = null;
             showSignInFragment();
         } else {

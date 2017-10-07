@@ -1,8 +1,8 @@
 package ng.hotels.android.app.ui.fragments;
 
-import android.app.Fragment;
 import android.content.Context;
 import android.os.Bundle;
+import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import ng.hotels.android.app.R;
 
 
-public class PendingPaymentReminderFragment extends Fragment {
+public class PendingPaymentReminderFragment extends DialogFragment {
 
 
     private OnFragmentInteractionListener mListener;

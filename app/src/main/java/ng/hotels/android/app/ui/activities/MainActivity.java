@@ -10,12 +10,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
+import android.widget.ScrollView;
 
 import ng.hotels.android.app.R;
 import ng.hotels.android.app.ui.fragments.PendingPaymentReminderFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements
+        PendingPaymentReminderFragment.OnFragmentInteractionListener{
+
+    private PendingPaymentReminderFragment pendingPaymentReminderFragment;
+    private ScrollView viewContainer;
+    private FrameLayout frameLayout;
 
     @Override
     protected void attachBaseContext(Context newBase) {
@@ -27,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        frameLayout = findViewById(R.id.container);
+        viewContainer = findViewById(R.id.view_container);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -38,6 +47,26 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+    }
+
+    private void showFragment() {
+        frameLayout.setVisibility(View.VISIBLE);
+        viewContainer.setVisibility(View.GONE);
+    }
+
+    private void showPendingPaymentReminderFragment(){
+        if (pendingPaymentReminderFragment == null)
+            pendingPaymentReminderFragment = PendingPaymentReminderFragment.newInstance();
+        pendingPaymentReminderFragment.show(getSupportFragmentManager(), "Payment reminder");
+        pendingPaymentReminderFragment.setCancelable(true);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (pendingPaymentReminderFragment != null && pendingPaymentReminderFragment.isAdded()) {
+        } else {
+            super.onBackPressed();
+        }
     }
 
     @Override
@@ -124,15 +153,9 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("page", 1);
         startActivity(intent);
     }
-    public void openConfirmBooking(View view) {
-        Intent intent =new Intent(getApplicationContext(), BookingActivity.class);
-        intent.putExtra("page", 3);
-        startActivity(intent);
+    public void openPaymentReminder(View view) {
+        showPendingPaymentReminderFragment();
     }
-    public void openPendingPaymentReminder(View view) {
-        startActivity(new Intent(getApplicationContext(), PendingPaymentReminderFragment.class));
-    }
-
 
     public void openConfirmBooking(View view) {
         Intent intent =new Intent(getApplicationContext(), BookingActivity.class);
@@ -150,5 +173,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(getApplicationContext(), EventsAndCinemasActivity.class);
         intent.putExtra("page", 0);
         startActivity(intent);
+    }
+
+    @Override
+    public void onConfirmClicked() {
+
     }
 }
