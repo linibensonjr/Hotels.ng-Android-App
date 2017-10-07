@@ -124,4 +124,10 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openConfirmBooking(View view) {
+        Intent intent =new Intent(getApplicationContext(), BookingActivity.class);
+        intent.putExtra("page", 3);
+        startActivity(intent);
+    }
+
 }
