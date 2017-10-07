@@ -54,7 +54,7 @@ public class CinemasRecyclerViewAdapter extends RecyclerView.Adapter<CinemasRecy
 
     @Override
     public int getItemCount() {
-        return 0;
+        return cinemasList.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder{

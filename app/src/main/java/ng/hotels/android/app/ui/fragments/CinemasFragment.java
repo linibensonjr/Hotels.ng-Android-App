@@ -4,11 +4,18 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import ng.hotels.app.R;
+import java.util.ArrayList;
+import java.util.List;
+
+import ng.hotels.android.app.R;
+import ng.hotels.android.app.adapters.CinemasRecyclerViewAdapter;
+import ng.hotels.android.app.model.Cinemas;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,16 +26,10 @@ import ng.hotels.app.R;
  * create an instance of this fragment.
  */
 public class CinemasFragment extends Fragment {
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
 
     private OnFragmentInteractionListener mListener;
+    private RecyclerView recyclerView;
+    private List<Cinemas> cinemasList = null;
 
     public CinemasFragment() {
         // Required empty public constructor
@@ -37,17 +38,12 @@ public class CinemasFragment extends Fragment {
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
      * @return A new instance of fragment CinemasFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static CinemasFragment newInstance(String param1, String param2) {
+    public static CinemasFragment newInstance() {
         CinemasFragment fragment = new CinemasFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,17 +51,44 @@ public class CinemasFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
+
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_cinemas, container, false);
+        View view =  inflater.inflate(R.layout.fragment_cinemas, container, false);
+
+        setViews();
+        recyclerView = view.findViewById(R.id.list);
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity(),
+                LinearLayoutManager.VERTICAL, false);
+        CinemasRecyclerViewAdapter adapter = new CinemasRecyclerViewAdapter(cinemasList, mListener);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+        recyclerView.setHasFixedSize(true);
+
+        return view;
+    }
+
+    private void setViews(){
+        if (cinemasList == null || cinemasList.size() == 0) {
+            cinemasList = new ArrayList<>();
+            Cinemas cinemas1 = new Cinemas("Genesis Cinema", "http://res.cloudinary.com/lanre01" +
+                    "/image/upload/v1507370209/avengers_image.png", "07:30 pm", "Sept. 29, 2017");
+            Cinemas cinemas2 = new Cinemas("Silverbird Cinemas", "http://res.cloudinary.com/" +
+                    "lanre01/image/upload/v1507370205/troy_legacy.png", "05:30 pm", "Sept. 30, 2017");
+            Cinemas cinemas3 = new Cinemas("Ozone Cinemas", "http://" +
+                    "res.cloudinary.com/lanre01/image/upload/v1507370209/assasin_full.png", "07:00 pm", "Oct. 1, 2017");
+
+            cinemasList.add(cinemas1);
+            cinemasList.add(cinemas2);
+            cinemasList.add(cinemas3);
+            cinemasList.add(cinemas1);
+            cinemasList.add(cinemas2);
+            cinemasList.add(cinemas3);
+        }
     }
 
     // TODO: Rename method, update argument and hook method into UI event

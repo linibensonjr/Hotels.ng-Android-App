@@ -130,4 +130,15 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void openCinemas(View view) {
+        Intent intent = new Intent(getApplicationContext(), EventsAndCinemasActivity.class);
+        intent.putExtra("page",1);
+        startActivity(intent);
+    }
+
+    public void openEvents(View view) {
+        Intent intent = new Intent(getApplicationContext(), EventsAndCinemasActivity.class);
+        intent.putExtra("page", 0);
+        startActivity(intent);
+    }
 }
