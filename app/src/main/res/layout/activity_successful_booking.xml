@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -10,13 +11,13 @@
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="40dp" />
+        android:layout_height="30dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="172dp"
         android:id="@+id/success"
-        android:background="@drawable/success"
+        android:background="@drawable/succes"
        android:layout_gravity="center_horizontal" />
 
     <View
@@ -35,7 +36,7 @@
 
     <View
         android:layout_width="wrap_content"
-        android:layout_height="30dp" />
+        android:layout_height="10dp" />
 
     <Button
         android:id="@+id/button2"
@@ -51,7 +52,7 @@
         />
     <View
         android:layout_width="wrap_content"
-        android:layout_height="30dp" />
+        android:layout_height="20dp" />
     <FrameLayout
         android:layout_gravity="center_horizontal"
         android:layout_width="wrap_content"
@@ -65,11 +66,10 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_marginTop="40dp"
+            android:layout_gravity="center_horizontal"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <View
-                android:layout_width="42dp"
-                android:layout_height="0dp" />
+
             <Button
                 android:layout_width="40dp"
                 android:layout_height="40dp"
