@@ -45,6 +45,8 @@
     <string name="language_settings_preferred">Choose your preferred language</string>
     <string name="language_settings_button">Save Changes</string>
 
+    <string name="checkout">Check out</string>
+
 
     <string name="already_have_an_account">Already have an account?</string>
     <string name="hotel_rating_wonderful">Wonderful</string>
