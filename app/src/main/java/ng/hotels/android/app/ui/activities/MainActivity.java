@@ -138,6 +138,13 @@ public class MainActivity extends AppCompatActivity implements
     }
 
 
+    public void openGallery(View View){
+        startActivity(new Intent(getApplicationContext(),GalleryActivity.class));
+    }
+
+
+
+
     public void openInvite(View view) {
         startActivity(new Intent(getApplicationContext(), InviteFriendsActivity.class));
     }
