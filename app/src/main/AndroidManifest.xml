@@ -122,6 +122,7 @@
         <activity
             android:name=".ui.activities.MocaptureActivity"
             android:label="@string/mo_capture" />
+
         <activity
             android:name=".ui.activities.MapsActivity"
             android:label="@string/title_activity_maps" />
