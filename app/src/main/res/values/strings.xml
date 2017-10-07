@@ -30,7 +30,6 @@
     <string name="checkout_button">Proceed</string>
 
 
-
     <string name="facebook_app_id">551060571900219</string>
     <string name="fb_login_protocol_scheme">fb551060571900219</string>
 
@@ -175,7 +174,7 @@
     <string name="title_name_loyalty">Loyalty Coins</string>
     <string name="booking">Uyo - Lagos</string>
 
-	<string name="mo_capture">MoCapture</string>
+    <string name="mo_capture">MoCapture</string>
     <string name="action_settings_two">Action Settings</string>
     <string name="used">Used</string>
     <string name="_1000lc">1000lc</string>
