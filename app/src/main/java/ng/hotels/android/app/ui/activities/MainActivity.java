@@ -12,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import ng.hotels.android.app.R;
+import ng.hotels.android.app.ui.fragments.PendingPaymentReminderFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity {
@@ -123,5 +124,14 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("page", 1);
         startActivity(intent);
     }
+    public void openConfirmBooking(View view) {
+        Intent intent =new Intent(getApplicationContext(), BookingActivity.class);
+        intent.putExtra("page", 3);
+        startActivity(intent);
+    }
+    public void openPendingPaymentReminder(View view) {
+        startActivity(new Intent(getApplicationContext(), PendingPaymentReminderFragment.class));
+    }
+
 
 }
