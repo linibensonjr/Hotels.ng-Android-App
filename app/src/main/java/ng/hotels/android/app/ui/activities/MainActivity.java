@@ -219,6 +219,10 @@ public class MainActivity extends AppCompatActivity implements
         showSlowNetworkOptionsFragment();
     }
 
+    public void openLanguageSetting(View view){
+        startActivity(new Intent(getApplicationContext(), LanguageSettingActivity.class));
+    }
+
     @Override
     public void onConfirmClicked() {
 
