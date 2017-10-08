@@ -82,7 +82,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activities.BookingDetailsActivity" />
         <activity android:name=".ui.activities.SuccessfulBookingActivity" />
-        <activity android:name=".ui.activities.BookingActivity" />
+        <activity android:name=".ui.activities.BookingActivity"
+            android:label="Check out"
+            android:parentActivityName=".ui.activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+        </activity>
         <activity android:name=".ui.activities.CardInfoActivity" />
         <activity
             android:name=".ui.activities.InviteFriendsActivity"
