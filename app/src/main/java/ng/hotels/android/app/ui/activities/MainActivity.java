@@ -223,6 +223,14 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(getApplicationContext(), LanguageSettingActivity.class));
     }
 
+    public void openHotelSearchList(View view){
+        startActivity(new Intent(getApplicationContext(), HotelListingAndSearchActivity.class));
+    }
+
+    public void openMoCapture(View view){
+        startActivity(new Intent(getApplicationContext(), MocaptureActivity.class));
+    }
+
     @Override
     public void onConfirmClicked() {
 
