@@ -6,6 +6,7 @@ package ng.hotels.android.app.adapters;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 
 import ng.hotels.android.app.R;
 import ng.hotels.android.app.model.ImageItem;
+import ng.hotels.android.app.ui.activities.DetailsActivity;
 
 public class GridViewAdapter extends ArrayAdapter<ImageItem> {
 
@@ -48,9 +50,19 @@ public class GridViewAdapter extends ArrayAdapter<ImageItem> {
         }
 
 
-        ImageItem item = data.get(position);
+        final ImageItem item = data.get(position);
         holder.imageTitle.setText(item.getTitle());
         holder.image.setImageBitmap(item.getImage());
+
+        row.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(context, DetailsActivity.class);
+                intent.putExtra("Image", item.getImage());
+                intent.putExtra("Title", item.getTitle());
+                context.startActivity(intent);
+            }
+        });
         return row;
     }
 
