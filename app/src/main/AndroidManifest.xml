@@ -83,7 +83,13 @@
         <activity android:name=".ui.activities.BookingDetailsActivity" />
         <activity android:name=".ui.activities.SuccessfulBookingActivity" />
         <activity android:name=".ui.activities.BookingActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:label="Check out"
+            android:parentActivityName=".ui.activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+
+        </activity>
         <activity android:name=".ui.activities.CardInfoActivity" />
         <activity
             android:name=".ui.activities.InviteFriendsActivity"
@@ -128,7 +134,13 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.activities.EventsAndCinemasActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="EVENTS"
+            android:parentActivityName=".ui.activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+
+        </activity>
         <activity
             android:name=".ui.activities.MapsActivity"
             android:label="@string/title_activity_maps" />
@@ -140,7 +152,13 @@
             android:label="@string/checkout" />
 
         <activity android:name=".ui.activities.FlightReminderActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:label="Flight Reminder"
+            android:parentActivityName=".ui.activities.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+
+        </activity>
 
         <activity
             android:name=".ui.activities.AnalyticsActivity"

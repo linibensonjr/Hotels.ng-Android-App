@@ -15,14 +15,17 @@ import android.widget.ScrollView;
 
 import ng.hotels.android.app.R;
 import ng.hotels.android.app.ui.fragments.PendingPaymentReminderFragment;
+import ng.hotels.android.app.ui.fragments.SlowNetworkOptionsFragment;
 import ng.hotels.android.app.ui.fragments.RequestDialogLoginRegisterFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements
-        PendingPaymentReminderFragment.OnFragmentInteractionListener{
+        PendingPaymentReminderFragment.OnFragmentInteractionListener,
+        SlowNetworkOptionsFragment.OnFragmentInteractionListener{
 
     private PendingPaymentReminderFragment pendingPaymentReminderFragment;
     private RequestDialogLoginRegisterFragment requestDialogLoginRegisterFragment;
+    private SlowNetworkOptionsFragment slowNetworkOptionsFragment;
     private ScrollView viewContainer;
     private FrameLayout frameLayout;
 
@@ -63,6 +66,13 @@ public class MainActivity extends AppCompatActivity implements
             requestDialogLoginRegisterFragment = RequestDialogLoginRegisterFragment.newInstance();
         requestDialogLoginRegisterFragment.show(getSupportFragmentManager(), "request Login");
         requestDialogLoginRegisterFragment.setCancelable(true);
+    }
+
+    private void showSlowNetworkOptionsFragment() {
+        if (slowNetworkOptionsFragment == null)
+            slowNetworkOptionsFragment = SlowNetworkOptionsFragment.newInstance();
+        slowNetworkOptionsFragment.show(getSupportFragmentManager(), "Slow Network Options");
+        slowNetworkOptionsFragment.setCancelable(true);
     }
 
     @Override
@@ -205,9 +215,17 @@ public class MainActivity extends AppCompatActivity implements
         requestloginFragment();
     }
 
+    public void openSlowNetworkReminder(View view) {
+        showSlowNetworkOptionsFragment();
+    }
+
     @Override
     public void onConfirmClicked() {
 
     }
 
+    @Override
+    public void onFragmentInteraction() {
+
+    }
 }

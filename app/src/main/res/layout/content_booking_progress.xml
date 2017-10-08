@@ -57,7 +57,7 @@
                 android:layout_gravity="center_horizontal"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:text="@string/your_info"
                 android:textColor="@color/colorPrimary"/>
         </LinearLayout>
@@ -75,7 +75,7 @@
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:text="@string/payment_options"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:textColor="#ffcdcdcd"/>
         </LinearLayout>
 
@@ -91,7 +91,7 @@
                 android:paddingEnd="12dp"
                 android:paddingStart="12dp"
                 android:text="@string/confirm_booking"
-                android:textSize="12sp"
+                android:textSize="10sp"
                 android:textColor="#ffcdcdcd"/>
         </LinearLayout>
 

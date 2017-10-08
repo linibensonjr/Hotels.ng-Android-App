@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -23,19 +22,15 @@ public class FlightReminderActivity extends AppCompatActivity {
     private List<Reminder> reminderList = null;
     @BindView(R.id.list)
     RecyclerView recyclerView;
-    @BindView(R.id.toolbar)
-    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flight_reminder);
         ButterKnife.bind(this);
-        setSupportActionBar(toolbar);
-
 
         if (getSupportActionBar() != null){
-            getSupportActionBar().setTitle("");
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
 
         }
         setupList();
