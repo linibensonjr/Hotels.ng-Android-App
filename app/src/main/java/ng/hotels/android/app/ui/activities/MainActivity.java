@@ -223,6 +223,11 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(getApplicationContext(), LanguageSettingActivity.class));
     }
 
+    public void openLoyaltyCoin(View view){
+        startActivity(new Intent(getApplicationContext(), LoyaltyCoinActivity.class));
+    }
+
+
     @Override
     public void onConfirmClicked() {
 

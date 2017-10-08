@@ -204,6 +204,7 @@
         <item>@drawable/img12</item>
     </string-array>
     <string name="title_activity_gallery">Gallery</string>
+    <string name="title_activity_loyalty_coin">Loyalty Coin</string>
     <string name="view_profile">View Profile</string>
     <string name="payment">Payment</string>
     <string name="bookings">Bookings</string>
