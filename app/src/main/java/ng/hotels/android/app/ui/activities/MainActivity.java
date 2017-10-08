@@ -179,6 +179,57 @@ public class MainActivity extends AppCompatActivity implements
         intent.putExtra("page", 0);
         startActivity(intent);
     }
+    public void openMoCapture(View view){
+        Intent intent = new Intent(getApplicationContext(), MocaptureActivity.class);
+        startActivity(intent);
+    }
+    public void openATMFinder(View view){
+        Intent intent = new Intent(getApplicationContext(), ATMFinder_Activity.class);
+        startActivity(intent);
+    }
+    public void openUserProfile(View view){
+        Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+        startActivity(intent);
+    }
+    public void openLoyaltyCoin(View view){
+        Intent intent = new Intent(getApplicationContext(), LoyaltyCoinActivity.class);
+        startActivity(intent);
+    }
+    public void openHotelSearchList(View view){
+        Intent intent = new Intent(getApplicationContext(), HotelListingAndSearchActivity.class);
+        startActivity(intent);
+    }
+    public void openLanguageSetting(View view){
+        Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+        startActivity(intent);
+    }
+    public void openLoginReminder(View view){
+        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
+        startActivity(intent);
+    }
+    public void openReviewStay(View view){
+        Intent intent = new Intent(getApplicationContext(), ReviewStayActivity.class);
+        startActivity(intent);
+    }
+    public void openSlowNetworkReminder(View view){
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        startActivity(intent);
+    }
+    public void openAnalytics(View view){
+        Intent intent = new Intent(getApplicationContext(), AnalyticsActivity.class);
+        startActivity(intent);
+    }
+    public void openFlightReminder(View view){
+        Intent intent = new Intent(getApplicationContext(), FlightReminderActivity.class);
+        startActivity(intent);
+    }
+    public void openCheckout(View view){
+        Intent intent = new Intent(getApplicationContext(), CheckoutActivity.class);
+        startActivity(intent);
+    }
+
+
+
 
     @Override
     public void onConfirmClicked() {
