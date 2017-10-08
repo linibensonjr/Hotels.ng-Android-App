@@ -197,6 +197,15 @@
                 android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
 
         </activity>
+
+        <activity
+            android:name=".ui.activities.LoyaltyCoinActivity"
+            android:label="@string/title_activity_loyalty_coin">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+
+        </activity>
     </application>
 
 </manifest>
