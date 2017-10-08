@@ -202,5 +202,7 @@
         <item>@drawable/img12</item>
     </string-array>
     <string name="title_activity_gallery">Gallery</string>
+    <string name="title_activity_review_stay">ReviewStayActivity</string>
+    <string name="review_text">Reservation Confirmation</string>
 
 </resources>

@@ -2,11 +2,11 @@ package ng.hotels.android.app.ui.activities;
 
 import android.os.Bundle;
 import android.app.Activity;
-import android.view.MenuItem;
 
 import ng.hotels.android.app.R;
 
 public class FlightReservationReceiptActivity extends Activity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

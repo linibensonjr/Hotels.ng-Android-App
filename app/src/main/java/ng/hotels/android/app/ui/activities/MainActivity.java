@@ -190,6 +190,10 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
     }
 
+    public void openReviewStay(View view) {
+        startActivity(new Intent(getApplicationContext(), ReviewStayActivity.class));
+    }
+
     @Override
     public void onConfirmClicked() {
 
