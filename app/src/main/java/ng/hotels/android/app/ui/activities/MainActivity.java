@@ -227,6 +227,12 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(getApplicationContext(), LoyaltyCoinActivity.class));
     }
 
+    public void openUserProfile(View view) {
+        Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+        intent.putExtra("test", 0);
+        startActivity(intent);
+    }
+
 
     @Override
     public void onConfirmClicked() {
