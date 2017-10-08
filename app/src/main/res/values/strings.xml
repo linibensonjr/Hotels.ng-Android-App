@@ -212,5 +212,8 @@
     <string name="dummy_card_date">08/22</string>
     <string name="title_activity_review_stay">ReviewStayActivity</string>
     <string name="review_text">Reservation Confirmation</string>
+    <string name="please_sign"><![CDATA[Please Sign in to access all features & service]]></string>
+    <string name="request_sign_in">SIGN IN</string>
+    <string name="don_t_have_">Don\'t have an account? \nSign up Now</string>
 
 </resources>

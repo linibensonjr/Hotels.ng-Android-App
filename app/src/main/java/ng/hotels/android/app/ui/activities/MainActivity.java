@@ -15,12 +15,14 @@ import android.widget.ScrollView;
 
 import ng.hotels.android.app.R;
 import ng.hotels.android.app.ui.fragments.PendingPaymentReminderFragment;
+import ng.hotels.android.app.ui.fragments.RequestDialogLoginRegisterFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements
         PendingPaymentReminderFragment.OnFragmentInteractionListener{
 
     private PendingPaymentReminderFragment pendingPaymentReminderFragment;
+    private RequestDialogLoginRegisterFragment requestDialogLoginRegisterFragment;
     private ScrollView viewContainer;
     private FrameLayout frameLayout;
 
@@ -54,6 +56,13 @@ public class MainActivity extends AppCompatActivity implements
             pendingPaymentReminderFragment = PendingPaymentReminderFragment.newInstance();
         pendingPaymentReminderFragment.show(getSupportFragmentManager(), "Payment reminder");
         pendingPaymentReminderFragment.setCancelable(true);
+    }
+
+    private void requestloginFragment(){
+        if (requestDialogLoginRegisterFragment == null)
+            requestDialogLoginRegisterFragment = RequestDialogLoginRegisterFragment.newInstance();
+        requestDialogLoginRegisterFragment.show(getSupportFragmentManager(), "request Login");
+        requestDialogLoginRegisterFragment.setCancelable(true);
     }
 
     @Override
@@ -190,6 +199,10 @@ public class MainActivity extends AppCompatActivity implements
     }
     public void openFlightReminder(View view){
         startActivity(new Intent(getApplicationContext(), FlightReminderActivity.class));
+    }
+
+    public void openLoginReminder(View view) {
+        requestloginFragment();
     }
 
     @Override
