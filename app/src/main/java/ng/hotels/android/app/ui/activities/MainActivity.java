@@ -223,6 +223,14 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(getApplicationContext(), LanguageSettingActivity.class));
     }
 
+    public void openHotelSearchList(View view){
+        startActivity(new Intent(getApplicationContext(), HotelListingAndSearchActivity.class));
+    }
+
+    public void openMoCapture(View view){
+        startActivity(new Intent(getApplicationContext(), MocaptureActivity.class));
+    }
+
     public void openLoyaltyCoin(View view){
         startActivity(new Intent(getApplicationContext(), LoyaltyCoinActivity.class));
     }

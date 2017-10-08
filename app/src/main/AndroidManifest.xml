@@ -114,6 +114,15 @@
                 android:value="ng.hotels.android.app.ui.activities.CustomerServiceStartConversationActivity" />
         </activity>
 
+        <activity android:name=".ui.activities.DetailsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:parentActivityName=".ui.activities.MocaptureActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.MocaptureActivity" />
+
+        </activity>
+
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -131,7 +140,12 @@
             android:label="@string/mo_capture" />
         <activity
             android:name=".ui.activities.HotelListingAndSearchActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Hotel Results"
+            android:parentActivityName=".ui.activities.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+        </activity>
         <activity
             android:name=".ui.activities.EventsAndCinemasActivity"
             android:label="EVENTS"
