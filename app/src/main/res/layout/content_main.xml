@@ -411,7 +411,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button29" />
+                app:layout_constraintTop_toBottomOf="@+id/button26" />
 
             <Button
                 android:id="@+id/button28"
@@ -427,7 +427,7 @@
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/user_profile_btn" />
+                app:layout_constraintTop_toBottomOf="@+id/button27" />
 
             <Button
                 android:id="@+id/button29"
@@ -445,7 +445,7 @@
                 android:layout_marginTop="8dp" />
 
             <Button
-                android:id="@+id/button27"
+                android:id="@+id/button30"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="openLoyaltyCoin"
@@ -454,13 +454,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button26"
+                app:layout_constraintTop_toBottomOf="@+id/button29"
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp" />
 
             <Button
-                android:id="@+id/user_profile_btn"
+                android:id="@+id/button31"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="openUserProfile"
@@ -469,13 +469,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button27"
+                app:layout_constraintTop_toBottomOf="@+id/button30"
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp" />
 
             <Button
-                android:id="@+id/button21"
+                android:id="@+id/button32"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:onClick="openATMFinder"
@@ -484,7 +484,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button20"
+                app:layout_constraintTop_toBottomOf="@+id/button31"
                 android:layout_marginEnd="24dp"
                 android:layout_marginStart="24dp"
                 android:layout_marginTop="8dp" />
