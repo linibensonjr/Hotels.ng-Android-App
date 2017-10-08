@@ -93,10 +93,20 @@
         <activity android:name=".ui.activities.CardInfoActivity" />
         <activity
             android:name=".ui.activities.InviteFriendsActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Invite Friends"
+            android:parentActivityName=".ui.activities.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+        </activity>
         <activity
             android:name=".ui.activities.BookingHistoryActivity"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:label="Booking History"
+            android:parentActivityName=".ui.activities.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="ng.hotels.android.app.ui.activities.HomeActivity" />
+        </activity>
         <activity android:name=".ui.activities.UserProfileActivity" />
         <activity
             android:name=".ui.activities.SettingsActivity"

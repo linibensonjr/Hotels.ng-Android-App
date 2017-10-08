@@ -36,6 +36,11 @@ public class InviteFriendsActivity extends AppCompatActivity implements View.OnC
         setContentView(R.layout.activity_invite_friends);
         ButterKnife.bind(this);
 
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
+            getSupportActionBar().setHomeButtonEnabled(true);
+        }
+
         inviteButton.setOnClickListener(this);
         inviteCode.setOnClickListener(this);
         termOfUse.setOnClickListener(this);
