@@ -49,11 +49,6 @@ public class MainActivity extends AppCompatActivity implements
         });
     }
 
-    private void showFragment() {
-        frameLayout.setVisibility(View.VISIBLE);
-        viewContainer.setVisibility(View.GONE);
-    }
-
     private void showPendingPaymentReminderFragment(){
         if (pendingPaymentReminderFragment == null)
             pendingPaymentReminderFragment = PendingPaymentReminderFragment.newInstance();
@@ -192,6 +187,9 @@ public class MainActivity extends AppCompatActivity implements
 
     public void openReviewStay(View view) {
         startActivity(new Intent(getApplicationContext(), ReviewStayActivity.class));
+    }
+    public void openFlightReminder(View view){
+        startActivity(new Intent(getApplicationContext(), FlightReminderActivity.class));
     }
 
     @Override

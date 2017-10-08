@@ -82,7 +82,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".ui.activities.BookingDetailsActivity" />
         <activity android:name=".ui.activities.SuccessfulBookingActivity" />
-        <activity android:name=".ui.activities.BookingActivity" />
+        <activity android:name=".ui.activities.BookingActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ui.activities.CardInfoActivity" />
         <activity
             android:name=".ui.activities.InviteFriendsActivity"
@@ -137,6 +138,10 @@
         <activity
             android:name=".ui.activities.CheckoutActivity"
             android:label="@string/checkout" />
+
+        <activity android:name=".ui.activities.FlightReminderActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <activity
             android:name=".ui.activities.AnalyticsActivity"
             android:label="@string/title_analytics_page">

@@ -61,8 +61,19 @@ public class BookingActivity extends AppCompatActivity implements
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (confirmBookingFragment != null && confirmBookingFragment.isAdded()){
+            showYourInfoFragment();
+        } else if (yourInfoFragment != null && yourInfoFragment.isAdded()){
+            showMainPage();
+        }
+    }
 
-
+    private void showMainPage(){
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 
     private void showYourInfoFragment() {
         step1Complete.setBackgroundColor(ContextCompat.getColor(this, R.color.background));
