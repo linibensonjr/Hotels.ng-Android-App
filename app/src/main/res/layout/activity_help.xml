@@ -16,24 +16,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <AutoCompleteTextView
-        android:id="@+id/autoCompleteTextView"
-        android:layout_width="325dp"
-        android:layout_height="41dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginLeft="19dp"
-        android:layout_marginRight="8dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="58dp"
-        android:background="#ffffff"
-        android:hint="Search help"
-        android:paddingLeft="40dp"
-        android:paddingStart="40dp"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/editText2"
         android:layout_width="32dp"
@@ -42,6 +24,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:clickable="true"
+        android:focusable="true"
         android:ems="10"
         android:text="X"
         android:textColor="#ffffff"
@@ -69,6 +52,7 @@
         android:layout_marginStart="61dp"
         android:layout_marginTop="218dp"
         android:clickable="true"
+        android:focusable="true"
         android:text="Send Feedback"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -80,8 +64,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
-        android:src="@drawable/call"
         android:layout_marginTop="174dp"
+        android:src="@drawable/call"
+        android:clickable="true"
+        android:focusable="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,9 +76,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
-        android:src="@drawable/feedback"
         android:layout_marginStart="16dp"
         android:layout_marginTop="218dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/feedback"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -116,6 +104,7 @@
         android:layout_marginStart="61dp"
         android:layout_marginTop="174dp"
         android:clickable="true"
+        android:focusable="true"
         android:text="Call"
         android:textSize="16sp"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -142,17 +131,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <SearchView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="28dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="72dp"
+        android:layout_width="323dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:background="#ffffff"
+        android:queryHint="Search help"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/ListView1"
-        android:layout_width="343dp"
+        android:layout_width="338dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginStart="16dp"
@@ -163,6 +154,8 @@
         android:scrollbars="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
 
 
 </android.support.constraint.ConstraintLayout>

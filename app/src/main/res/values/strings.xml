@@ -197,6 +197,5 @@
         <item>@drawable/img11</item>
         <item>@drawable/img12</item>
     </string-array>
-    <string name="title_activity_gallery">Gallery</string>
 
 </resources>
