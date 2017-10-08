@@ -204,5 +204,11 @@
         <item>@drawable/img12</item>
     </string-array>
     <string name="title_activity_gallery">Gallery</string>
+    <string name="view_profile">View Profile</string>
+    <string name="payment">Payment</string>
+    <string name="bookings">Bookings</string>
+    <string name="card_holder">Card Holder</string>
+    <string name="expires">Expires</string>
+    <string name="dummy_card_date">08/22</string>
 
 </resources>
