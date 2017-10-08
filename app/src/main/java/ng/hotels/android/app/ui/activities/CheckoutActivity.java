@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import ng.hotels.android.app.R;
 
+
 public class CheckoutActivity extends AppCompatActivity {
 
     @Override

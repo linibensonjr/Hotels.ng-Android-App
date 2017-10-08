@@ -76,6 +76,9 @@ dependencies {
     //Chart Library
     compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
 
+    //Image Loader
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+
     compile 'com.google.android.gms:play-services-auth:11.4.2'
     compile 'com.google.android.gms:play-services-location:11.4.2'
     compile 'com.google.android.gms:play-services-maps:11.4.2'

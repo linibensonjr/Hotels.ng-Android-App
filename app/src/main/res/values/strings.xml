@@ -210,5 +210,7 @@
     <string name="card_holder">Card Holder</string>
     <string name="expires">Expires</string>
     <string name="dummy_card_date">08/22</string>
+    <string name="title_activity_review_stay">ReviewStayActivity</string>
+    <string name="review_text">Reservation Confirmation</string>
 
 </resources>
