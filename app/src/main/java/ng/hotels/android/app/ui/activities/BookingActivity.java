@@ -61,10 +61,30 @@ public class BookingActivity extends AppCompatActivity implements
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        if (confirmBookingFragment != null && confirmBookingFragment.isAdded()){
+            showYourInfoFragment();
+        } else if (yourInfoFragment != null && yourInfoFragment.isAdded()){
+            showMainPage();
+        }
+    }
 
+    private void showMainPage(){
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
 
+    private void setupToolbar(String title){
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setTitle(title);
+        }
+    }
 
     private void showYourInfoFragment() {
+        setupToolbar("Check out");
         step1Complete.setBackgroundColor(ContextCompat.getColor(this, R.color.background));
         step2.setImageResource(R.drawable.circle_normal);
         step2Complete.setBackgroundColor(ContextCompat.getColor(this, R.color.background));
@@ -77,6 +97,7 @@ public class BookingActivity extends AppCompatActivity implements
     }
 
     private void showConfirmBookingFragment() {
+        setupToolbar("Confirm Booking");
         step1Complete.setBackgroundColor(ContextCompat.getColor(this,R.color.colorPrimary));
         step2.setImageResource(R.drawable.circle_complete);
         step2Text.setTextColor(ContextCompat.getColor(this, R.color.colorPrimary));
@@ -89,6 +110,7 @@ public class BookingActivity extends AppCompatActivity implements
     }
 
     private void showPaymentOptionsFragment() {
+        setupToolbar("Payment Option");
         step1Complete.setBackgroundColor(ContextCompat.getColor(this,R.color.colorPrimary));
         step2.setImageResource(R.drawable.circle_complete);
         step2Text.setTextColor(ContextCompat.getColor(this, R.color.colorPrimary));

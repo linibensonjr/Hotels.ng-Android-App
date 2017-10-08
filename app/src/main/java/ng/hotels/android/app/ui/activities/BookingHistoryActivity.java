@@ -22,6 +22,11 @@ public class BookingHistoryActivity extends AppCompatActivity implements
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_history);
 
+        if (getSupportActionBar() != null){
+            getSupportActionBar().setHomeButtonEnabled(true);
+            getSupportActionBar().setHomeAsUpIndicator(R.drawable.ic_chevron_left_black_24dp);
+        }
+
         ButterKnife.bind(this);
         Intent intent = getIntent();
         if (intent.hasExtra("page")) {
@@ -51,6 +56,20 @@ public class BookingHistoryActivity extends AppCompatActivity implements
                 .replace(R.id.booking_container, fragment, fragment.getClass().getSimpleName())
                 .addToBackStack(fragment.getClass().getSimpleName())
                 .commit();
+    }
+
+    private void showHome(){
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (bookingHistoryDetailsFragment != null && bookingHistoryDetailsFragment.isAdded()){
+            showBookingHistoryListFragment();
+        } else {
+            showHome();
+        }
     }
 
     @Override

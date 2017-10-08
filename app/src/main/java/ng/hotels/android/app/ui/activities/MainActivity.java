@@ -180,11 +180,6 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
     }
 
-    public void openATMFinder(View view) {
-        Intent intent = new Intent(getApplicationContext(), ATMFinder_Activity.class);
-        startActivity(intent);
-    }
-
     @Override
     public void onConfirmClicked() {
 

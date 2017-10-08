@@ -19,8 +19,9 @@ public class DetailsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.details_activity);
 
-        String title = getIntent().getStringExtra("title");
-        Bitmap bitmap = getIntent().getParcelableExtra("image");
+
+        String title = getIntent().getStringExtra("Title");
+        Bitmap bitmap = getIntent().getParcelableExtra("Image");
 
         TextView titleTextView = (TextView) findViewById(R.id.title);
         titleTextView.setText(title);
