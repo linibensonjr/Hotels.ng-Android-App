@@ -15,12 +15,17 @@ import android.widget.ScrollView;
 
 import ng.hotels.android.app.R;
 import ng.hotels.android.app.ui.fragments.PendingPaymentReminderFragment;
+import ng.hotels.android.app.ui.fragments.RequestDialogLoginRegisterFragment;
+import ng.hotels.android.app.ui.fragments.SlowNetworkOptionsFragment;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class MainActivity extends AppCompatActivity implements
-        PendingPaymentReminderFragment.OnFragmentInteractionListener{
+        PendingPaymentReminderFragment.OnFragmentInteractionListener,
+        SlowNetworkOptionsFragment.OnFragmentInteractionListener{
 
     private PendingPaymentReminderFragment pendingPaymentReminderFragment;
+    private SlowNetworkOptionsFragment slowNetworkOptionsFragment;
+    private RequestDialogLoginRegisterFragment requestDialogLoginRegisterFragment;
     private ScrollView viewContainer;
     private FrameLayout frameLayout;
 
@@ -59,6 +64,20 @@ public class MainActivity extends AppCompatActivity implements
             pendingPaymentReminderFragment = PendingPaymentReminderFragment.newInstance();
         pendingPaymentReminderFragment.show(getSupportFragmentManager(), "Payment reminder");
         pendingPaymentReminderFragment.setCancelable(true);
+    }
+
+    private void showSlowNetworkOptions(){
+        if (slowNetworkOptionsFragment == null)
+            slowNetworkOptionsFragment = SlowNetworkOptionsFragment.newInstance();
+        slowNetworkOptionsFragment.setCancelable(true);
+        slowNetworkOptionsFragment.show(getSupportFragmentManager(), "Slow Network Options");
+    }
+
+    private void showReuestLogin(){
+        if (requestDialogLoginRegisterFragment == null)
+            requestDialogLoginRegisterFragment = RequestDialogLoginRegisterFragment.newInstance();
+        requestDialogLoginRegisterFragment.setCancelable(true);
+        requestDialogLoginRegisterFragment.show(getSupportFragmentManager(), "Request Login");
     }
 
     @Override
@@ -137,8 +156,6 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(new Intent(getApplicationContext(),GalleryActivity.class));
     }
 
-
-
     public void openInvite(View view) {
         startActivity(new Intent(getApplicationContext(), InviteFriendsActivity.class));
     }
@@ -189,6 +206,7 @@ public class MainActivity extends AppCompatActivity implements
     }
     public void openUserProfile(View view){
         Intent intent = new Intent(getApplicationContext(), UserProfileActivity.class);
+        intent.putExtra("test", "test");
         startActivity(intent);
     }
     public void openLoyaltyCoin(View view){
@@ -200,20 +218,18 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
     }
     public void openLanguageSetting(View view){
-        Intent intent = new Intent(getApplicationContext(), SettingsActivity.class);
+        Intent intent = new Intent(getApplicationContext(), LanguageSettingActivity.class);
         startActivity(intent);
     }
     public void openLoginReminder(View view){
-        Intent intent = new Intent(getApplicationContext(),MainActivity.class);
-        startActivity(intent);
+        showReuestLogin();
     }
     public void openReviewStay(View view){
         Intent intent = new Intent(getApplicationContext(), ReviewStayActivity.class);
         startActivity(intent);
     }
     public void openSlowNetworkReminder(View view){
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-        startActivity(intent);
+        showSlowNetworkOptions();
     }
     public void openAnalytics(View view){
         Intent intent = new Intent(getApplicationContext(), AnalyticsActivity.class);
@@ -228,11 +244,13 @@ public class MainActivity extends AppCompatActivity implements
         startActivity(intent);
     }
 
-
-
-
     @Override
     public void onConfirmClicked() {
+
+    }
+
+    @Override
+    public void onFragmentInteraction() {
 
     }
 }

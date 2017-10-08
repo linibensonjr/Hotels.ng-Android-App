@@ -11,9 +11,6 @@ import android.support.v7.app.AlertDialog;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.Button;
 import android.widget.TextView;
 
 import ng.hotels.android.app.R;
@@ -24,7 +21,7 @@ import ng.hotels.android.app.R;
 public class RequestDialogLoginRegisterFragment extends DialogFragment {
 
 
-    private RequestDialogLoginRegisterFragment.OnFragmentInteractionListener mListener;
+    private OnFragmentInteractionListener mListener;
     private TextView don_t_have;
 
     public RequestDialogLoginRegisterFragment() {

@@ -85,4 +85,5 @@ public class FlightReminderActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

@@ -37,6 +37,15 @@ public class UserProfileActivity extends AppCompatActivity implements UserProfil
                 .commit();
     }
 
+    private void showHome(){
+        startActivity(new Intent(this, MainActivity.class));
+        finish();
+    }
+
+    @Override
+    public void onBackPressed() {
+        showHome();
+    }
 
     @Override
     public void onFragmentInteraction(Uri uri) {
